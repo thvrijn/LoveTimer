@@ -1,8 +1,7 @@
 const secondsRef = document.getElementById('secondsRef');
 const minutesRef = document.getElementById('minutesRef');
 const hoursRef = document.getElementById('hoursRef');
-const daysRef1 = document.getElementById('daysRef1');
-const daysRef2 = document.getElementById('daysRef2');
+const daysRef = document.getElementById('daysRef');
 
 setInterval(function () {
     let start_time = new Date('09/13/2021');
@@ -17,6 +16,5 @@ setInterval(function () {
     secondsRef.innerText = seconds % minutes;
     minutesRef.innerText = minutes % hours;
     hoursRef.innerText = hours % days;
-    daysRef1.innerText = days
-    daysRef2.innerText = days
+    daysRef.innerText = days
 }, 1000);
