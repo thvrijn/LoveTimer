@@ -5,53 +5,48 @@
     <title>Love Timer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="container">
+<video id="background-video" autoplay muted>
+    <source src="img/background.mp4" type="video/mp4">
+</video>
 
-<div class="container">
-    <div class="scroller layer-1">
-        <img src="img/layer-1.png" alt="">
-    </div>
+<main>
+    <div class="blocks-body">
+        <div class="block">
+            <h1 id="daysRef">
+                <div class="loader"></div>
+            </h1>
+            <p>Dagen</p>
+        </div>
 
-    <div class="scroller layer-2">
-        <img src="img/layer-2.png" alt="">
-    </div>
+        <div class="block">
+            <h1 id="hoursRef">
+                <div class="loader"></div>
+            </h1>
+            <p>Uren</p>
+        </div>
 
-    <div class="blocks">
-        <div class="blocks-body">
-            <div class="block">
-                <h1 id="daysRef"><div class="loader"></div></h1>
-                <p>Dagen</p>
-            </div>
+        <div class="block">
+            <h1 id="minutesRef">
+                <div class="loader"></div>
+            </h1>
+            <p>Minuten</p>
+        </div>
 
-            <div class="block">
-                <h1 id="hoursRef"><div class="loader"></div></h1>
-                <p>Uren</p>
-            </div>
-
-            <div class="block">
-                <h1 id="minutesRef"><div class="loader"></div></h1>
-                <p>Minuten</p>
-            </div>
-
-            <div class="block">
-                <h1 id="secondsRef"><div class="loader"></div></h1>
-                <p>Seconden</p>
-            </div>
+        <div class="block">
+            <h1 id="secondsRef">
+                <div class="loader"></div>
+            </h1>
+            <p>Seconden</p>
         </div>
     </div>
-
-    <div class="scroller layer-3">
-        <img src="img/layer-3.png" alt="">
-    </div>
-
-    <div class="scroller layer-4">
-        <img src="img/layer-4.png" alt="">
-    </div>
-
-    <img class="overlay" src="img/overlay.png" alt="">
-</div>
-
+</main>
 <script type="text/javascript" src="script.js"></script>
 </body>
 </html>

@@ -3,6 +3,8 @@ const minutesRef = document.getElementById('minutesRef');
 const hoursRef = document.getElementById('hoursRef');
 const daysRef = document.getElementById('daysRef');
 
+document.getElementById('background-video').play();
+
 setInterval(function () {
     let start_time = new Date('09/13/2021');
     let now = new Date();
@@ -13,8 +15,8 @@ setInterval(function () {
     const minutes = Math.floor(diff / (1000 * 60));
     const seconds = Math.floor(diff / 1000);
 
-    secondsRef.innerText = seconds % minutes;
-    minutesRef.innerText = minutes % hours;
-    hoursRef.innerText = hours % days;
     daysRef.innerText = days
+    hoursRef.innerText = hours % days
+    minutesRef.innerText = minutes % hours
+    secondsRef.innerText = seconds % minutes
 }, 1000);

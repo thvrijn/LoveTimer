@@ -5,75 +5,27 @@
 }
 
 .container {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    background: url('img/bg.png') center;
-    background-size: cover;
-    overflow: hidden;
 }
 
-.scroller {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    animation: infinite scroll linear;
-}
-
-.scroller img {
+#background-video {
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
-
-@keyframes scroll {
-    from {
-        transform: translateY(-100%)
-    }
-    to {
-        transform: translateY(100%)
-    }
-}
-
-.layer-1 {
-    animation-duration: 20s;
-    z-index: 1;
-}
-
-.layer-2 {
-    animation-duration: 15s;
-    z-index: 2;
-}
-
-.layer-3 {
-    animation-duration: 10s;
-    z-index: 4;
-}
-
-.layer-4 {
-    animation-duration: 7.5s;
-    z-index: 5;
-}
-
-.overlay {
     position: absolute;
-    z-index: 5;
+    z-index: -1;
+}
+
+main {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-}
-
-.blocks {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: grid;
-    place-items: center;
-    z-index: 3
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .blocks-body {
@@ -81,12 +33,10 @@
     grid-template-columns: 1fr 1fr;
     color: white;
     gap: 3rem;
-}
-
-@media (min-width: 1024px) {
-    .blocks-body {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
+    background: rgba(0, 0, 0, .5);
+    padding: 1rem;
+    border-radius: 1rem;
+    /*border: .3rem white solid;*/
 }
 
 .block {
@@ -96,29 +46,35 @@
 }
 
 .block h1 {
-    font-size: 5rem;
-    text-shadow: 6px 6px 0 rgba(0, 0, 0, 0.5);
+    font-size: 3rem;
+    text-shadow: 6px 6px 0 rgba(0, 0, 0, 0.25);
 }
 
 .block p {
-    font-size: 1.5rem;
-    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1rem;
+    font-family: 'Rubik', sans-serif;
+    text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.25);
 }
 
-.loader {
-    width: 2.5rem;
-    height: 2.5rem;
-    border-radius: 100%;
-    border: .5rem solid white;
-    border-left: .5rem solid #e6e6e6;
-    animation: 1s infinite loaderSpin linear;
-}
-
-@keyframes loaderSpin {
-    from {
-        transform: rotate(0deg)
+@media (min-width: 768px) {
+    .blocks-body {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        padding: 2rem;
     }
-    to {
-        transform: rotate(360deg)
+}
+
+@media (min-width: 1024px) {
+    .blocks-body {
+        padding: 2rem;
+    }
+
+    .block h1 {
+        font-size: 5rem;
+    }
+
+    .block p {
+        font-size: 1.2rem;
     }
 }
